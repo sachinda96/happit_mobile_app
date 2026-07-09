@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Happit</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D5F2DC'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle'%3E%F0%9F%8C%B1%3C/text%3E%3C/svg%3E">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #FBF8F3;
+            --dark-bg: #1C1917;
+            --primary-text: #2B2724;
+            --secondary-text: #9E9A96;
+            --muted-text: #C4C0BB;
+            --surface: #FFFFFF;
+            --border: #EDE9E3;
+            --dark-surface: #292524;
+            --dark-border: #3D3836;
+
+            --green-main: #41AE67;
+            --green-light: #D5F2DC;
+            --blue-main: #3E9BFF;
+            --blue-light: #DDEEFF;
+
+            --sp-xs: 4px;
+            --sp-sm: 8px;
+            --sp-md: 16px;
+            --sp-lg: 24px;
+            --sp-xl: 32px;
+            --sp-xxl: 48px;
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+
+            --font-display: 'Baloo2', 'Spline Sans', Inter, sans-serif;
+            --font-body: 'PlusJakartaSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: #F5F0EA;
+        }
+
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.3s;
+        }
+
+        body.dark-mode header {
+            background: var(--dark-surface);
+            border-bottom-color: var(--dark-border);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--sp-lg) var(--sp-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--sp-sm);
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo-name {
+            background: linear-gradient(135deg, var(--green-main), var(--blue-main));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: var(--green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        body.dark-mode .logo-icon {
+            background: rgba(65, 174, 103, 0.25);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--sp-lg);
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .nav-links a {
+            color: #F5F0EA;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue-main);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(20deg);
+        }
+
+        /* Legal content */
+        .legal-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: var(--sp-xxl) var(--sp-md);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--secondary-text);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: var(--sp-lg);
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--blue-main);
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: var(--sp-xxl);
+        }
+
+        .legal-header h1 {
+            font-family: var(--font-display);
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: var(--sp-sm);
+        }
+
+        .effective-date {
+            color: var(--secondary-text);
+            font-size: 14px;
+        }
+
+        body.dark-mode .effective-date {
+            color: #9C9490;
+        }
+
+        .legal-content h2 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            margin: var(--sp-xxl) 0 var(--sp-md);
+            padding-top: var(--sp-xl);
+            border-top: 1px solid var(--border);
+        }
+
+        body.dark-mode .legal-content h2 {
+            border-top-color: var(--dark-border);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .legal-content p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: var(--sp-md);
+        }
+
+        .legal-content ul {
+            padding-left: 22px;
+            margin-bottom: var(--sp-md);
+        }
+
+        .legal-content li {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: var(--sp-xs);
+        }
+
+        .legal-content strong {
+            font-weight: 700;
+        }
+
+        .legal-content a {
+            color: var(--blue-main);
+            text-decoration: none;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-table-wrap {
+            overflow-x: auto;
+            margin-bottom: var(--sp-lg);
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 480px;
+        }
+
+        .legal-table th,
+        .legal-table td {
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .legal-table th {
+            background: var(--surface);
+            font-family: var(--font-display);
+            font-weight: 600;
+        }
+
+        body.dark-mode .legal-table th,
+        body.dark-mode .legal-table td {
+            border-color: var(--dark-border);
+        }
+
+        body.dark-mode .legal-table th {
+            background: var(--dark-surface);
+        }
+
+        .contact-box {
+            background: var(--green-light);
+            border-radius: var(--radius-lg);
+            padding: var(--sp-lg);
+            text-align: center;
+            margin-top: var(--sp-xl);
+        }
+
+        body.dark-mode .contact-box {
+            background: rgba(65, 174, 103, 0.15);
+        }
+
+        .contact-box a {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        footer {
+            background: var(--primary-text);
+            color: white;
+            padding: var(--sp-xxl) var(--sp-md);
+            margin-top: var(--sp-xxl);
+        }
+
+        body.dark-mode footer {
+            background: #0F0D0B;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--sp-xl);
+            margin-bottom: var(--sp-xl);
+        }
+
+        .footer-section h4 {
+            font-family: var(--font-display);
+            margin-bottom: var(--sp-md);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: var(--sp-sm);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: var(--sp-lg);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: var(--sp-md);
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: var(--sp-sm);
+                text-align: center;
+            }
+
+            .legal-header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a class="logo" href="index.html">
+                <span class="logo-icon">🌱</span>
+                <span class="logo-name">Happit</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#screens">Screens</a></li>
+                <li><a href="index.html#benefits">Why Choose Us</a></li>
+                <li><a href="index.html#download">Download</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main class="legal-wrap">
+        <a class="back-link" href="index.html">&larr; Back to home</a>
+
+        <div class="legal-header">
+            <h1>Privacy Policy</h1>
+            <p class="effective-date">Effective date: July 8, 2026</p>
+        </div>
+
+        <article class="legal-content">
+            <p>Happit ("the App", "we", "us") is developed and operated by an independent developer ("the Developer"). This Privacy Policy explains what information Happit collects, how it is used, and the choices you have. By using Happit, you agree to the practices described in this policy.</p>
+            <p>If you have questions, you can contact us at: <a href="mailto:sachindanipunkumara@gmail.com">sachindanipunkumara@gmail.com</a></p>
+
+            <h2>1. Information We Collect</h2>
+
+            <p><strong>Account information</strong><br>When you create an account or sign in, we collect:</p>
+            <ul>
+                <li><strong>Email/password sign-up:</strong> the email address and name you provide.</li>
+                <li><strong>Sign in with Google:</strong> your name, email address, and profile photo, as authorized by you through Google.</li>
+                <li><strong>Sign in with Apple:</strong> your name and email address (or Apple's private relay email if you choose to hide your email), as authorized by you through Apple.</li>
+            </ul>
+            <p>We use <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Authentication</a> (a Google service) to manage sign-in and store your account credentials securely. We never see or store your password in plain text — Google's Firebase Authentication handles this.</p>
+
+            <p><strong>Habit and app data</strong><br>To provide the core functionality of the app, we store the content you create, including:</p>
+            <ul>
+                <li>Habit names, icons, colors, and frequency (e.g., daily, weekdays, weekends).</li>
+                <li>Your completion history for each habit (the dates you mark a habit as done).</li>
+                <li>Optional reminder times you set for a habit.</li>
+            </ul>
+            <p>This data is stored in Google Cloud Firestore, tied to your account, and is only accessible to you. It is used solely to display your habits, calculate streaks and statistics, and power reminders inside the app.</p>
+
+            <p><strong>Notifications</strong><br>If you choose to enable reminders for a habit, Happit requests permission to send local notifications on your device. These reminders are scheduled <strong>entirely on your device</strong> — we do not use push notification services, and no notification content is sent to or stored on our servers. You can disable notification permissions at any time in your device settings.</p>
+
+            <p><strong>Information we do not collect</strong><br>Happit does not collect or access your:</p>
+            <ul>
+                <li>Location</li>
+                <li>Contacts</li>
+                <li>Camera or photos (other than the profile photo optionally provided by Google/Apple sign-in)</li>
+                <li>Precise device identifiers for advertising purposes</li>
+            </ul>
+            <p>We do not show ads and do not use third-party advertising or tracking SDKs.</p>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the information described above only to:</p>
+            <ul>
+                <li>Create and maintain your account.</li>
+                <li>Sync your habits and progress across app sessions.</li>
+                <li>Send local reminders you've opted into.</li>
+                <li>Provide customer support if you contact us.</li>
+            </ul>
+            <p>We do not sell your personal information, and we do not share it with third parties for their own marketing purposes.</p>
+
+            <h2>3. Third-Party Services</h2>
+            <p>Happit relies on the following third-party service providers to operate:</p>
+            <div class="legal-table-wrap">
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Purpose</th>
+                            <th>Provider's Privacy Policy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Firebase Authentication</td>
+                            <td>Account creation and sign-in</td>
+                            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Firestore</td>
+                            <td>Storing your habits and profile data</td>
+                            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Sign in with Google</td>
+                            <td>Optional social sign-in</td>
+                            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Sign in with Apple</td>
+                            <td>Optional social sign-in (iOS)</td>
+                            <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>These providers process data on our behalf and are contractually/technically restricted from using it for their own purposes beyond operating their service.</p>
+
+            <h2>4. Data Storage and Security</h2>
+            <p>Your data is stored on Google Cloud infrastructure via Firebase. Access to your habit data is restricted by security rules so that only your authenticated account can read or write your own data. While we take reasonable steps to protect your information, no method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.</p>
+
+            <h2>5. Data Retention and Deletion</h2>
+            <p>We retain your account and habit data for as long as your account remains active. If you would like your account and all associated data permanently deleted, contact us at <a href="mailto:sachindanipunkumara@gmail.com">sachindanipunkumara@gmail.com</a> and we will process your request within a reasonable time.</p>
+
+            <h2>6. Children's Privacy</h2>
+            <p>Happit is not directed at children under the age of 13 (or the relevant age of digital consent in your country), and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
+
+            <h2>7. Your Rights</h2>
+            <p>Depending on where you live, you may have rights to access, correct, export, or delete your personal data (for example, under GDPR in the EU/UK or CCPA in California). To exercise any of these rights, contact us at <a href="mailto:sachindanipunkumara@gmail.com">sachindanipunkumara@gmail.com</a>.</p>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of Happit after changes take effect constitutes acceptance of the revised policy.</p>
+
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions or concerns about this Privacy Policy or your data, please contact us:</p>
+            <div class="contact-box">
+                <a href="mailto:sachindanipunkumara@gmail.com">sachindanipunkumara@gmail.com</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Happit</h4>
+                <p>Build better habits, one day at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#screens">Screenshots</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#">About Us</a></li>
+                    <li><a href="mailto:sachindanipunkumara@gmail.com">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Happit. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            updateThemeToggle();
+        }
+
+        function updateThemeToggle() {
+            const toggle = document.querySelector('.theme-toggle');
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        }
+
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+        updateThemeToggle();
+    </script>
+</body>
+</html>
